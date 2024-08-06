@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="titles">
+      <h1>Etch A Sketch</h1>
+      <h1>Draw Your mind</h1>
+    </div>
+    <div class="container">
+      <div class="settings">
+        <div class="colorSelect">
+          <div class="colorBox" style="background-color: transparent">
+            <input
+              type="color"
+              id="penColor"
+              style="background-color: transparent"
+            />
+          </div>
+          <a>Pen Color</a>
+        </div>
+        <div class="colorSelect">
+          <div class="colorBox" style="background-color: transparent">
+            <input
+              type="color"
+              id="bgColor"
+              style="background-color: transparent"
+            />
+          </div>
+          <a>Background Color</a>
+        </div>
+        <button id="eraser">Eraser</button>
+        <button id="rainbow">Cocktail</button>
+        <button id="shade">Shader</button>
+        <button id="lighter">Lightener</button>
+        <input
+          type="range"
+          value="24"
+          min="1"
+          max="60"
+          id="range-slider"
+          onmousemove="rangeSliderValue(this.value)"
+          onchange="rangeSlider(this.value)"
+          style="width: 70%"
+        />
+        <a>
+          Grid Size
+          <span style="background-color: transparent" id="gridSize">35</span>
+          x
+          <span style="background-color: transparent" id="gridSize">35</span>
+        </a>
+        <button id="toggleLines">Toggle Grid Lines</button>
+        <button id="clearGrid">Clear</button>
+      </div>
+      <div class="grid"></div>
+    </div>
+    <script src="base.js"></script>
+  </body>
+</html>
