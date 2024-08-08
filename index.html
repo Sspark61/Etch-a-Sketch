@@ -11,12 +11,13 @@
       <h1>Etch A Sketch</h1>
       <h1>Draw Your mind</h1>
     </div>
-    <div class="container">
+    <div class="container" draggable="false">
       <div class="settings">
         <div class="colorSelect">
           <div class="colorBox" style="background-color: transparent">
             <input
               type="color"
+              value="#000000"
               id="penColor"
               style="background-color: transparent"
             />
@@ -27,6 +28,7 @@
           <div class="colorBox" style="background-color: transparent">
             <input
               type="color"
+              value="#ffffff"
               id="bgColor"
               style="background-color: transparent"
             />
@@ -39,19 +41,17 @@
         <button id="lighter">Lightener</button>
         <input
           type="range"
-          value="24"
+          value="30"
           min="1"
           max="60"
-          id="range-slider"
-          onmousemove="rangeSliderValue(this.value)"
-          onchange="rangeSlider(this.value)"
+          id="slider"
           style="width: 70%"
         />
         <a>
           Grid Size
-          <span style="background-color: transparent" id="gridSize">35</span>
+          <span style="background-color: transparent" id="gridSize1">30</span>
           x
-          <span style="background-color: transparent" id="gridSize">35</span>
+          <span style="background-color: transparent" id="gridSize2">30</span>
         </a>
         <button id="toggleLines">Toggle Grid Lines</button>
         <button id="clearGrid">Clear</button>
